@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace productos_A
 {
-    public partial class proveedoresForm : Form
+    public partial class ProveedoresForm: Form
     {
-        public proveedoresForm()
+        public ProveedoresForm()
         {
             InitializeComponent();
-        }
-
-        private void proveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.proveedoresBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.postgresDataSet);
-
-        }
-
-        private void proveedoresForm_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'postgresDataSet.proveedores' Puede moverla o quitarla según sea necesario.
-            this.proveedoresTableAdapter.Fill(this.postgresDataSet.proveedores);
-
         }
     }
 }
